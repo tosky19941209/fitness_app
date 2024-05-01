@@ -9,18 +9,19 @@ const passcodeModel = require("../model/emailverify")
 // Function to send an email
 
 exports.test = (req, res) => {
-    const fromEmail = 'felixeliass1994@gmail.com';
-    const toEmail = 'warrytomas51@gmail.com';
-    const subject = 'Test Email';
-    const text = 'Hello, this is a test email!';
+    res.send("Welcome to fitness")
+    // const fromEmail = 'felixeliass1994@gmail.com';
+    // const toEmail = 'warrytomas51@gmail.com';
+    // const subject = 'Test Email';
+    // const text = 'Hello, this is a test email!';
 
-    sendEmail(fromEmail, toEmail, subject, text, (err, message) => {
-        if (err) {
-            res.status(500).send('Error sending email');
-        } else {
-            res.send('Email sent successfully');
-        }
-    });
+    // sendEmail(fromEmail, toEmail, subject, text, (err, message) => {
+    //     if (err) {
+    //         res.status(500).send('Error sending email');
+    //     } else {
+    //         res.send('Email sent successfully');
+    //     }
+    // });
 };
 
 exports.signup = async (req, res) => {
