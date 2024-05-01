@@ -9,7 +9,9 @@ const passcodeModel = require("../model/emailverify")
 // Function to send an email
 
 exports.test = (req, res) => {
-    res.send("Welcome to fitness")
+    res.send({
+        message:"welcome to fitness"
+    })
     // const fromEmail = 'felixeliass1994@gmail.com';
     // const toEmail = 'warrytomas51@gmail.com';
     // const subject = 'Test Email';
