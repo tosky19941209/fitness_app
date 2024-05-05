@@ -20,8 +20,8 @@ var http = require('http');
 var fs = require('fs');
 
 var options = {
-    key: fs.readFileSync('cert/key.pem'),
-    cert: fs.readFileSync('cert/server.crt')
+    key: fs.readFileSync('cert/traeningsbuddy-dk-privateKey.key'),
+    cert: fs.readFileSync('cert/traeningsbuddy-dk.crt')
 };
 
 // Create an HTTP service.
