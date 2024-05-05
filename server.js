@@ -19,17 +19,17 @@ var https = require('https');
 var http = require('http');
 var fs = require('fs');
 
-// var options = {
-//     key: fs.readFileSync('cert/key.pem'),
-//     cert: fs.readFileSync('cert/server.cert')
-// };
+var options = {
+    key: fs.readFileSync('cert/key.pem'),
+    cert: fs.readFileSync('cert/server.crt')
+};
 
 // Create an HTTP service.
-http.createServer(app).listen(config.port, () => {
-    console.log(`http server is running on ${config.port}`)
-})
+// http.createServer(app).listen(config.port, () => {
+//     console.log(`http server is running on ${config.port}`)
+// })
 
 
-// https.createServer(options, app).listen(443, () => {
-//     console.log("https Server is running on port 443")
-// });
+https.createServer(options, app).listen(443, () => {
+    console.log("https Server is running on port 443")
+});
