@@ -11,10 +11,8 @@ module.exports = () => {
     app.use(express.json());
     app.use(cors());
     app.use(morgan("dev"));
-
-    // app.use(express.static(path.join(__dirname, '../build')))
-
-
+    
+    app.use(express.static(path.join(__dirname, '../build')))
 
     routers.map(router => {
         app.use(`/api/${router}`, require(`../routers/${router}`))
