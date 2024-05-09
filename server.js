@@ -25,11 +25,11 @@ var options = {
 };
 
 // Create an HTTP service.
-// http.createServer(app).listen(config.port, () => {
-//     console.log(`http server is running on ${config.port}`)
-// })
+http.createServer(app).listen(config.port, () => {
+    console.log(`http server is running on ${config.port}`)
+})
 
 
-https.createServer(options, app).listen(443, () => {
-    console.log("https Server is running on port 443")
-});
+// https.createServer(options, app).listen(443, () => {
+//     console.log("https Server is running on port 443")
+// });
