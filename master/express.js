@@ -11,7 +11,14 @@ module.exports = () => {
     app.use(express.json());
     app.use(cors());
     app.use(morgan("dev"));
-    
+    // app.use((req, res, next) => {
+    //     console.log("Domain is aded")
+    //     if (req.hostname === 'http://traeningsbuddy.dk/') {
+    //         return next();
+    //     }
+    //     res.status(403).send('Forbidden');
+    // });
+
     app.use(express.static(path.join(__dirname, '../build')))
 
     routers.map(router => {
