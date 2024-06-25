@@ -9,6 +9,8 @@ const passcodeModel = require("../model/emailverify")
 // Function to send an email
 
 exports.test = (req, res) => {
+
+    console.log("Hello")
     res.send({
         message:"welcome to fitness"
     })

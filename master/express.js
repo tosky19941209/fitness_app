@@ -20,7 +20,7 @@ module.exports = () => {
     // });
 
     app.use(express.static(path.join(__dirname, '../build')))
-
+    console.log(routers)
     routers.map(router => {
         app.use(`/api/${router}`, require(`../routers/${router}`))
     })
